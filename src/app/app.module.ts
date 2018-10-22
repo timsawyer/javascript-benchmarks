@@ -1,5 +1,6 @@
 import { BrowserModule } from "@angular/platform-browser";
 import { NgModule } from "@angular/core";
+
 import {
   MatToolbarModule,
   MatSidenavModule,
@@ -11,6 +12,7 @@ import {
 import { AppComponent } from "./app.component";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { BoxAndWhiskersComponent } from "./box-and-whiskers/box-and-whiskers.component";
+import { HttpClientModule } from "@angular/common/http";
 
 @NgModule({
   declarations: [AppComponent, BoxAndWhiskersComponent],
@@ -21,7 +23,8 @@ import { BoxAndWhiskersComponent } from "./box-and-whiskers/box-and-whiskers.com
     MatSidenavModule,
     MatCheckboxModule,
     MatCardModule,
-    MatIconModule
+    MatIconModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
