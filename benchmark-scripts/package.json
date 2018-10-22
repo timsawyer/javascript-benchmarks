@@ -1,0 +1,16 @@
+{
+  "name": "benchmark",
+  "version": "1.0.0",
+  "description": "",
+  "main": "benchmark.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "jsonfile": "^5.0.0",
+    "linked-list": "^1.0.4",
+    "random-number": "0.0.9"
+  }
+}
