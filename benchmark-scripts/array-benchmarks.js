@@ -75,10 +75,15 @@ const array_10_6 = generateArray(1000000);
 const array_10_7 = generateArray(10000000);
 const arraySizes = [array_10_3, array_10_4, array_10_5, array_10_6, array_10_7];
 
+const arrayIterationResults = getOperationResultsObject();
+const arrayInsertResults = getOperationResultsObject();
+const arraySearchResults = getOperationResultsObject();
+const arrayDeleteResults = getOperationResultsObject();
+const arraySortResults = getOperationResultsObject();
+
 // Run each operation 10 times for each array size and collect results
 arraySizes.forEach((arr, arraySizeIndex) => {
   // run iterate's
-  const arrayIterationResults = getOperationResultsObject();
   for (let i = 0; i < 10; i++) {
     const arrCopy = [...arr];
     const start = performance.now();
@@ -89,10 +94,8 @@ arraySizes.forEach((arr, arraySizeIndex) => {
     const timeElapsed = performance.now() - start;
     arrayIterationResults[arraySizeIndex].results.push(timeElapsed);
   }
-  arrayBenchmarkData.operations[0].operationResults = arrayIterationResults;
 
   // run insert's
-  const arrayInsertResults = getOperationResultsObject();
   for (let i = 0; i < 10; i++) {
     const arrCopy = [...arr];
     const middle = arrCopy.length / 2;
@@ -102,10 +105,8 @@ arraySizes.forEach((arr, arraySizeIndex) => {
     const timeElapsed = performance.now() - start;
     arrayInsertResults[arraySizeIndex].results.push(timeElapsed);
   }
-  arrayBenchmarkData.operations[1].operationResults = arrayInsertResults;
 
   // run searches
-  const arraySearchResults = getOperationResultsObject();
   for (let i = 0; i < 10; i++) {
     const arrCopy = [...arr];
     const middleItem = arrCopy[arrCopy.length / 2];
@@ -115,10 +116,8 @@ arraySizes.forEach((arr, arraySizeIndex) => {
     const timeElapsed = performance.now() - start;
     arraySearchResults[arraySizeIndex].results.push(timeElapsed);
   }
-  arrayBenchmarkData.operations[2].operationResults = arraySearchResults;
 
   // run delete's
-  const arrayDeleteResults = getOperationResultsObject();
   for (let i = 0; i < 10; i++) {
     const arrCopy = [...arr];
     const middle = arrCopy.length / 2;
@@ -128,10 +127,8 @@ arraySizes.forEach((arr, arraySizeIndex) => {
     const timeElapsed = performance.now() - start;
     arrayDeleteResults[arraySizeIndex].results.push(timeElapsed);
   }
-  arrayBenchmarkData.operations[3].operationResults = arrayDeleteResults;
 
   // run sorts
-  const arraySortResults = getOperationResultsObject();
   for (let i = 0; i < 10; i++) {
     const arrCopy = [...arr];
     const start = performance.now();
@@ -140,8 +137,13 @@ arraySizes.forEach((arr, arraySizeIndex) => {
     const timeElapsed = performance.now() - start;
     arraySortResults[arraySizeIndex].results.push(timeElapsed);
   }
-  arrayBenchmarkData.operations[4].operationResults = arraySortResults;
 });
+
+arrayBenchmarkData.operations[0].operationResults = arrayIterationResults;
+arrayBenchmarkData.operations[1].operationResults = arrayInsertResults;
+arrayBenchmarkData.operations[2].operationResults = arraySearchResults;
+arrayBenchmarkData.operations[3].operationResults = arrayDeleteResults;
+arrayBenchmarkData.operations[4].operationResults = arraySortResults;
 
 delete array_10_3;
 delete array_10_4;
