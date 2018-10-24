@@ -10,8 +10,6 @@
   "license": "ISC",
   "dependencies": {
     "dbly-linked-list": "^0.2.0",
-    "jsonfile": "^5.0.0",
-    "linked-list": "^1.0.4",
-    "random-number": "0.0.9"
+    "jsonfile": "^5.0.0"
   }
 }
