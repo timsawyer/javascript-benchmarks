@@ -1,13 +1,14 @@
 export const BENCHMARK_DATA = [
   {
-    "name": "Array",
-    "operations": [
+    name: "Array",
+    operations: [
       {
-        "name": "Iterate - Array",
-        "operationResults": [
+        name: "Iterate - Array",
+        operationResults: [
           {
-            "size": "10^3",
-            "results": [
+            size: "10^3",
+            enabled: true,
+            results: [
               0.06062600016593933,
               0.024141999892890453,
               0.02239799965173006,
@@ -21,8 +22,9 @@ export const BENCHMARK_DATA = [
             ]
           },
           {
-            "size": "10^4",
-            "results": [
+            size: "10^4",
+            enabled: true,
+            results: [
               0.21599000040441751,
               0.21969499997794628,
               0.21710099931806326,
@@ -36,8 +38,9 @@ export const BENCHMARK_DATA = [
             ]
           },
           {
-            "size": "10^5",
-            "results": [
+            size: "10^5",
+            enabled: true,
+            results: [
               1.0909460000693798,
               1.2933970000594854,
               1.287351000122726,
@@ -51,8 +54,9 @@ export const BENCHMARK_DATA = [
             ]
           },
           {
-            "size": "10^6",
-            "results": [
+            size: "10^6",
+            enabled: true,
+            results: [
               11.225653999485075,
               11.236367999576032,
               11.265851999633014,
@@ -66,8 +70,9 @@ export const BENCHMARK_DATA = [
             ]
           },
           {
-            "size": "10^7",
-            "results": [
+            size: "10^7",
+            enabled: true,
+            results: [
               116.65888200048357,
               117.96953100059181,
               128.6157679995522,
@@ -83,11 +88,12 @@ export const BENCHMARK_DATA = [
         ]
       },
       {
-        "name": "Insert - Array",
-        "operationResults": [
+        name: "Insert - Array",
+        operationResults: [
           {
-            "size": "10^3",
-            "results": [
+            size: "10^3",
+            enabled: true,
+            results: [
               0.002827000804245472,
               0.0024640001356601715,
               0.0010630004107952118,
@@ -101,8 +107,9 @@ export const BENCHMARK_DATA = [
             ]
           },
           {
-            "size": "10^4",
-            "results": [
+            size: "10^4",
+            enabled: true,
+            results: [
               0.007833000272512436,
               0.0035250000655651093,
               0.001980000175535679,
@@ -116,8 +123,9 @@ export const BENCHMARK_DATA = [
             ]
           },
           {
-            "size": "10^5",
-            "results": [
+            size: "10^5",
+            enabled: true,
+            results: [
               0.08837200049310923,
               0.06869200058281422,
               0.06544099934399128,
@@ -131,8 +139,9 @@ export const BENCHMARK_DATA = [
             ]
           },
           {
-            "size": "10^6",
-            "results": [
+            size: "10^6",
+            enabled: true,
+            results: [
               0.7609489997848868,
               0.7633549999445677,
               0.6883950000628829,
@@ -146,8 +155,9 @@ export const BENCHMARK_DATA = [
             ]
           },
           {
-            "size": "10^7",
-            "results": [
+            size: "10^7",
+            enabled: true,
+            results: [
               10.039032999426126,
               8.678367000073195,
               10.081032000482082,
@@ -163,11 +173,12 @@ export const BENCHMARK_DATA = [
         ]
       },
       {
-        "name": "Search - Array",
-        "operationResults": [
+        name: "Search - Array",
+        operationResults: [
           {
-            "size": "10^3",
-            "results": [
+            size: "10^3",
+            enabled: true,
+            results: [
               0.004957000724971294,
               0.0041690003126859665,
               0.0025999993085861206,
@@ -181,8 +192,9 @@ export const BENCHMARK_DATA = [
             ]
           },
           {
-            "size": "10^4",
-            "results": [
+            size: "10^4",
+            enabled: true,
+            results: [
               0.037769999355077744,
               0.031615000218153,
               0.02936099935323,
@@ -196,8 +208,9 @@ export const BENCHMARK_DATA = [
             ]
           },
           {
-            "size": "10^5",
-            "results": [
+            size: "10^5",
+            enabled: true,
+            results: [
               0.3264110004529357,
               0.31901200022548437,
               0.3256810000166297,
@@ -211,8 +224,9 @@ export const BENCHMARK_DATA = [
             ]
           },
           {
-            "size": "10^6",
-            "results": [
+            size: "10^6",
+            enabled: true,
+            results: [
               3.333677999675274,
               4.035417000763118,
               3.3566829999908805,
@@ -226,8 +240,9 @@ export const BENCHMARK_DATA = [
             ]
           },
           {
-            "size": "10^7",
-            "results": [
+            size: "10^7",
+            enabled: true,
+            results: [
               29.236916999332607,
               31.522854999639094,
               30.33883599936962,
@@ -243,11 +258,12 @@ export const BENCHMARK_DATA = [
         ]
       },
       {
-        "name": "Delete - Array",
-        "operationResults": [
+        name: "Delete - Array",
+        operationResults: [
           {
-            "size": "10^3",
-            "results": [
+            size: "10^3",
+            enabled: true,
+            results: [
               0.001864999532699585,
               0.002078000456094742,
               0.0009749997407197952,
@@ -261,8 +277,9 @@ export const BENCHMARK_DATA = [
             ]
           },
           {
-            "size": "10^4",
-            "results": [
+            size: "10^4",
+            enabled: true,
+            results: [
               0.005628999322652817,
               0.003450999967753887,
               0.002535000443458557,
@@ -276,8 +293,9 @@ export const BENCHMARK_DATA = [
             ]
           },
           {
-            "size": "10^5",
-            "results": [
+            size: "10^5",
+            enabled: true,
+            results: [
               0.06519499979913235,
               0.06239699944853783,
               0.06852299999445677,
@@ -291,8 +309,9 @@ export const BENCHMARK_DATA = [
             ]
           },
           {
-            "size": "10^6",
-            "results": [
+            size: "10^6",
+            enabled: true,
+            results: [
               1.0447410000488162,
               0.8462310004979372,
               0.7270330004394054,
@@ -306,8 +325,9 @@ export const BENCHMARK_DATA = [
             ]
           },
           {
-            "size": "10^7",
-            "results": [
+            size: "10^7",
+            enabled: true,
+            results: [
               8.448591999709606,
               9.202032999135554,
               8.386125000193715,
@@ -323,11 +343,12 @@ export const BENCHMARK_DATA = [
         ]
       },
       {
-        "name": "Sort - Array",
-        "operationResults": [
+        name: "Sort - Array",
+        operationResults: [
           {
-            "size": "10^3",
-            "results": [
+            size: "10^3",
+            enabled: true,
+            results: [
               2.6373590007424355,
               1.6052590003237128,
               1.5525759998708963,
@@ -341,8 +362,9 @@ export const BENCHMARK_DATA = [
             ]
           },
           {
-            "size": "10^4",
-            "results": [
+            size: "10^4",
+            enabled: true,
+            results: [
               10.796326000243425,
               9.972652000375092,
               4.7053110003471375,
@@ -356,8 +378,9 @@ export const BENCHMARK_DATA = [
             ]
           },
           {
-            "size": "10^5",
-            "results": [
+            size: "10^5",
+            enabled: true,
+            results: [
               73.90143099986017,
               75.00126500055194,
               69.75853400025517,
@@ -371,8 +394,9 @@ export const BENCHMARK_DATA = [
             ]
           },
           {
-            "size": "10^6",
-            "results": [
+            size: "10^6",
+            enabled: true,
+            results: [
               1643.9195059994236,
               1396.4248160002753,
               1384.232224999927,
@@ -386,8 +410,9 @@ export const BENCHMARK_DATA = [
             ]
           },
           {
-            "size": "10^7",
-            "results": [
+            size: "10^7",
+            enabled: true,
+            results: [
               22860.248711000197,
               20278.82482900005,
               20868.34344200045,
@@ -403,11 +428,12 @@ export const BENCHMARK_DATA = [
         ]
       },
       {
-        "name": "Combined Workload - Array",
-        "operationResults": [
+        name: "Combined Workload - Array",
+        operationResults: [
           {
-            "size": "10^3",
-            "results": [
+            size: "10^3",
+            enabled: true,
+            results: [
               0.06550700031220913,
               0.03232499957084656,
               0.026878999546170235,
@@ -421,8 +447,9 @@ export const BENCHMARK_DATA = [
             ]
           },
           {
-            "size": "10^4",
-            "results": [
+            size: "10^4",
+            enabled: true,
+            results: [
               0.32843799982219934,
               0.3082609996199608,
               0.28233599942177534,
@@ -436,8 +463,9 @@ export const BENCHMARK_DATA = [
             ]
           },
           {
-            "size": "10^5",
-            "results": [
+            size: "10^5",
+            enabled: true,
+            results: [
               1.9564040005207062,
               1.924523999914527,
               1.9792519994080067,
@@ -451,8 +479,9 @@ export const BENCHMARK_DATA = [
             ]
           },
           {
-            "size": "10^6",
-            "results": [
+            size: "10^6",
+            enabled: true,
+            results: [
               21.93160199932754,
               22.080098999664187,
               20.894225999712944,
@@ -466,8 +495,9 @@ export const BENCHMARK_DATA = [
             ]
           },
           {
-            "size": "10^7",
-            "results": [
+            size: "10^7",
+            enabled: true,
+            results: [
               222.6961369998753,
               230.41810099966824,
               237.83895699959248,
@@ -485,14 +515,15 @@ export const BENCHMARK_DATA = [
     ]
   },
   {
-    "name": "Map",
-    "operations": [
+    name: "Map",
+    operations: [
       {
-        "name": "Iterate - Map",
-        "operationResults": [
+        name: "Iterate - Map",
+        operationResults: [
           {
-            "size": "10^3",
-            "results": [
+            size: "10^3",
+            enabled: true,
+            results: [
               0.06902599986642599,
               0.027230999432504177,
               0.025028999894857407,
@@ -506,8 +537,9 @@ export const BENCHMARK_DATA = [
             ]
           },
           {
-            "size": "10^4",
-            "results": [
+            size: "10^4",
+            enabled: true,
+            results: [
               0.2430579997599125,
               0.24266100022941828,
               0.24242000002413988,
@@ -521,8 +553,9 @@ export const BENCHMARK_DATA = [
             ]
           },
           {
-            "size": "10^5",
-            "results": [
+            size: "10^5",
+            enabled: true,
+            results: [
               1.2902859998866916,
               1.2868999997153878,
               1.2904580002650619,
@@ -536,8 +569,9 @@ export const BENCHMARK_DATA = [
             ]
           },
           {
-            "size": "10^6",
-            "results": [
+            size: "10^6",
+            enabled: true,
+            results: [
               11.785535999573767,
               11.30589499976486,
               14.516560999676585,
@@ -551,8 +585,9 @@ export const BENCHMARK_DATA = [
             ]
           },
           {
-            "size": "10^7",
-            "results": [
+            size: "10^7",
+            enabled: true,
+            results: [
               128.82770900055766,
               116.71437299996614,
               119.59946699999273,
@@ -568,11 +603,12 @@ export const BENCHMARK_DATA = [
         ]
       },
       {
-        "name": "Insert - Map",
-        "operationResults": [
+        name: "Insert - Map",
+        operationResults: [
           {
-            "size": "10^3",
-            "results": [
+            size: "10^3",
+            enabled: true,
+            results: [
               0.00111400056630373,
               0.0017889998853206635,
               0.00066399946808815,
@@ -586,8 +622,9 @@ export const BENCHMARK_DATA = [
             ]
           },
           {
-            "size": "10^4",
-            "results": [
+            size: "10^4",
+            enabled: true,
+            results: [
               0.0007579997181892395,
               0.0007399991154670715,
               0.0005740001797676086,
@@ -601,8 +638,9 @@ export const BENCHMARK_DATA = [
             ]
           },
           {
-            "size": "10^5",
-            "results": [
+            size: "10^5",
+            enabled: true,
+            results: [
               0.001130000688135624,
               0.000691000372171402,
               0.0005649998784065247,
@@ -616,8 +654,9 @@ export const BENCHMARK_DATA = [
             ]
           },
           {
-            "size": "10^6",
-            "results": [
+            size: "10^6",
+            enabled: true,
+            results: [
               0.0010540001094341278,
               0.0010270001366734505,
               0.0007160007953643799,
@@ -631,8 +670,9 @@ export const BENCHMARK_DATA = [
             ]
           },
           {
-            "size": "10^7",
-            "results": [
+            size: "10^7",
+            enabled: true,
+            results: [
               0.000996999442577362,
               0.0008490001782774925,
               0.0006579998880624771,
@@ -648,11 +688,12 @@ export const BENCHMARK_DATA = [
         ]
       },
       {
-        "name": "Search - Map",
-        "operationResults": [
+        name: "Search - Map",
+        operationResults: [
           {
-            "size": "10^3",
-            "results": [
+            size: "10^3",
+            enabled: true,
+            results: [
               0.0010539991781115532,
               0.0015569999814033508,
               0.0005319993942975998,
@@ -666,8 +707,9 @@ export const BENCHMARK_DATA = [
             ]
           },
           {
-            "size": "10^4",
-            "results": [
+            size: "10^4",
+            enabled: true,
+            results: [
               0.000760999508202076,
               0.0005529997870326042,
               0.0004000002518296242,
@@ -681,8 +723,9 @@ export const BENCHMARK_DATA = [
             ]
           },
           {
-            "size": "10^5",
-            "results": [
+            size: "10^5",
+            enabled: true,
+            results: [
               0.0011069998145103455,
               0.0005489997565746307,
               0.00043499935418367386,
@@ -696,8 +739,9 @@ export const BENCHMARK_DATA = [
             ]
           },
           {
-            "size": "10^6",
-            "results": [
+            size: "10^6",
+            enabled: true,
+            results: [
               0.0014920001849532127,
               0.0004719998687505722,
               0.00040400028228759766,
@@ -711,8 +755,9 @@ export const BENCHMARK_DATA = [
             ]
           },
           {
-            "size": "10^7",
-            "results": [
+            size: "10^7",
+            enabled: true,
+            results: [
               0.001721000298857689,
               0.00045800022780895233,
               0.0003800000995397568,
@@ -728,11 +773,12 @@ export const BENCHMARK_DATA = [
         ]
       },
       {
-        "name": "Delete - Map",
-        "operationResults": [
+        name: "Delete - Map",
+        operationResults: [
           {
-            "size": "10^3",
-            "results": [
+            size: "10^3",
+            enabled: true,
+            results: [
               0.0007649995386600494,
               0.0018280008807778358,
               0.0005250005051493645,
@@ -746,8 +792,9 @@ export const BENCHMARK_DATA = [
             ]
           },
           {
-            "size": "10^4",
-            "results": [
+            size: "10^4",
+            enabled: true,
+            results: [
               0.0006790002807974815,
               0.0006769997999072075,
               0.00043499935418367386,
@@ -761,8 +808,9 @@ export const BENCHMARK_DATA = [
             ]
           },
           {
-            "size": "10^5",
-            "results": [
+            size: "10^5",
+            enabled: true,
+            results: [
               0.0009399997070431709,
               0.0010000001639127731,
               0.0004679998382925987,
@@ -776,8 +824,9 @@ export const BENCHMARK_DATA = [
             ]
           },
           {
-            "size": "10^6",
-            "results": [
+            size: "10^6",
+            enabled: true,
+            results: [
               0.0008609993383288383,
               0.00100800022482872,
               0.0003800000995397568,
@@ -791,8 +840,9 @@ export const BENCHMARK_DATA = [
             ]
           },
           {
-            "size": "10^7",
-            "results": [
+            size: "10^7",
+            enabled: true,
+            results: [
               0.0010569998994469643,
               0.0008090008050203323,
               0.0003779996186494827,
@@ -808,11 +858,12 @@ export const BENCHMARK_DATA = [
         ]
       },
       {
-        "name": "Combined Workload - Map",
-        "operationResults": [
+        name: "Combined Workload - Map",
+        operationResults: [
           {
-            "size": "10^3",
-            "results": [
+            size: "10^3",
+            enabled: true,
+            results: [
               0.03694100026041269,
               0.031216999515891075,
               0.07912300061434507,
@@ -826,8 +877,9 @@ export const BENCHMARK_DATA = [
             ]
           },
           {
-            "size": "10^4",
-            "results": [
+            size: "10^4",
+            enabled: true,
+            results: [
               0.24427699949592352,
               0.24403499998152256,
               0.24813800025731325,
@@ -841,8 +893,9 @@ export const BENCHMARK_DATA = [
             ]
           },
           {
-            "size": "10^5",
-            "results": [
+            size: "10^5",
+            enabled: true,
+            results: [
               1.334332000464201,
               1.2470690002664924,
               1.2505559995770454,
@@ -856,8 +909,9 @@ export const BENCHMARK_DATA = [
             ]
           },
           {
-            "size": "10^6",
-            "results": [
+            size: "10^6",
+            enabled: true,
+            results: [
               13.78905799984932,
               12.854689999483526,
               11.8052420001477,
@@ -871,8 +925,9 @@ export const BENCHMARK_DATA = [
             ]
           },
           {
-            "size": "10^7",
-            "results": [
+            size: "10^7",
+            enabled: true,
+            results: [
               116.86623500008136,
               123.36797599960119,
               117.37830900028348,
@@ -890,14 +945,15 @@ export const BENCHMARK_DATA = [
     ]
   },
   {
-    "name": "Set",
-    "operations": [
+    name: "Set",
+    operations: [
       {
-        "name": "Iterate - Set",
-        "operationResults": [
+        name: "Iterate - Set",
+        operationResults: [
           {
-            "size": "10^3",
-            "results": [
+            size: "10^3",
+            enabled: true,
+            results: [
               0.08729599975049496,
               0.04990999959409237,
               0.03027100022882223,
@@ -911,8 +967,9 @@ export const BENCHMARK_DATA = [
             ]
           },
           {
-            "size": "10^4",
-            "results": [
+            size: "10^4",
+            enabled: true,
+            results: [
               0.2934290003031492,
               0.29315099958330393,
               0.292837000451982,
@@ -926,8 +983,9 @@ export const BENCHMARK_DATA = [
             ]
           },
           {
-            "size": "10^5",
-            "results": [
+            size: "10^5",
+            enabled: true,
+            results: [
               1.3998070005327463,
               1.3864909997209907,
               1.3157630003988743,
@@ -941,8 +999,9 @@ export const BENCHMARK_DATA = [
             ]
           },
           {
-            "size": "10^6",
-            "results": [
+            size: "10^6",
+            enabled: true,
+            results: [
               15.36765900067985,
               14.302861000411212,
               12.85922099929303,
@@ -956,8 +1015,9 @@ export const BENCHMARK_DATA = [
             ]
           },
           {
-            "size": "10^7",
-            "results": [
+            size: "10^7",
+            enabled: true,
+            results: [
               118.71435800008476,
               116.90698400046676,
               117.5760080004111,
@@ -973,11 +1033,12 @@ export const BENCHMARK_DATA = [
         ]
       },
       {
-        "name": "Insert - Set",
-        "operationResults": [
+        name: "Insert - Set",
+        operationResults: [
           {
-            "size": "10^3",
-            "results": [
+            size: "10^3",
+            enabled: true,
+            results: [
               0.0010210005566477776,
               0.002167000435292721,
               0.0009080003947019577,
@@ -991,8 +1052,9 @@ export const BENCHMARK_DATA = [
             ]
           },
           {
-            "size": "10^4",
-            "results": [
+            size: "10^4",
+            enabled: true,
+            results: [
               0.0008749999105930328,
               0.0008059991523623466,
               0.000693000853061676,
@@ -1006,8 +1068,9 @@ export const BENCHMARK_DATA = [
             ]
           },
           {
-            "size": "10^5",
-            "results": [
+            size: "10^5",
+            enabled: true,
+            results: [
               0.001029999926686287,
               0.0006879996508359909,
               0.0006580008193850517,
@@ -1021,8 +1084,9 @@ export const BENCHMARK_DATA = [
             ]
           },
           {
-            "size": "10^6",
-            "results": [
+            size: "10^6",
+            enabled: true,
+            results: [
               0.0008759992197155952,
               0.0013159997761249542,
               0.0007210001349449158,
@@ -1036,8 +1100,9 @@ export const BENCHMARK_DATA = [
             ]
           },
           {
-            "size": "10^7",
-            "results": [
+            size: "10^7",
+            enabled: true,
+            results: [
               0.001281999982893467,
               0.0010810000821948051,
               0.0009759999811649323,
@@ -1053,11 +1118,12 @@ export const BENCHMARK_DATA = [
         ]
       },
       {
-        "name": "Search - Set",
-        "operationResults": [
+        name: "Search - Set",
+        operationResults: [
           {
-            "size": "10^3",
-            "results": [
+            size: "10^3",
+            enabled: true,
+            results: [
               0.0010449998080730438,
               0.001969999633729458,
               0.0006640003994107246,
@@ -1071,8 +1137,9 @@ export const BENCHMARK_DATA = [
             ]
           },
           {
-            "size": "10^4",
-            "results": [
+            size: "10^4",
+            enabled: true,
+            results: [
               0.0008649993687868118,
               0.0006510000675916672,
               0.00048500020056962967,
@@ -1086,8 +1153,9 @@ export const BENCHMARK_DATA = [
             ]
           },
           {
-            "size": "10^5",
-            "results": [
+            size: "10^5",
+            enabled: true,
+            results: [
               0.0008659996092319489,
               0.0005189999938011169,
               0.00044499989598989487,
@@ -1101,8 +1169,9 @@ export const BENCHMARK_DATA = [
             ]
           },
           {
-            "size": "10^6",
-            "results": [
+            size: "10^6",
+            enabled: true,
+            results: [
               0.0013070004060864449,
               0.00043800007551908493,
               0.00040300004184246063,
@@ -1116,8 +1185,9 @@ export const BENCHMARK_DATA = [
             ]
           },
           {
-            "size": "10^7",
-            "results": [
+            size: "10^7",
+            enabled: true,
+            results: [
               0.0014629997313022614,
               0.0007259994745254517,
               0.0005679996684193611,
@@ -1133,11 +1203,12 @@ export const BENCHMARK_DATA = [
         ]
       },
       {
-        "name": "Delete - Set",
-        "operationResults": [
+        name: "Delete - Set",
+        operationResults: [
           {
-            "size": "10^3",
-            "results": [
+            size: "10^3",
+            enabled: true,
+            results: [
               0.0012419996783137321,
               0.0023190006613731384,
               0.0006379997357726097,
@@ -1151,8 +1222,9 @@ export const BENCHMARK_DATA = [
             ]
           },
           {
-            "size": "10^4",
-            "results": [
+            size: "10^4",
+            enabled: true,
+            results: [
               0.0007970007136464119,
               0.0008760001510381699,
               0.0005299998447299004,
@@ -1166,8 +1238,9 @@ export const BENCHMARK_DATA = [
             ]
           },
           {
-            "size": "10^5",
-            "results": [
+            size: "10^5",
+            enabled: true,
+            results: [
               0.0011309999972581863,
               0.001349000260233879,
               0.00047400034964084625,
@@ -1181,8 +1254,9 @@ export const BENCHMARK_DATA = [
             ]
           },
           {
-            "size": "10^6",
-            "results": [
+            size: "10^6",
+            enabled: true,
+            results: [
               0.0010569998994469643,
               0.0011709993705153465,
               0.00035899970680475235,
@@ -1196,8 +1270,9 @@ export const BENCHMARK_DATA = [
             ]
           },
           {
-            "size": "10^7",
-            "results": [
+            size: "10^7",
+            enabled: true,
+            results: [
               0.001986999996006489,
               0.0013899998739361763,
               0.0006369994953274727,
@@ -1213,11 +1288,12 @@ export const BENCHMARK_DATA = [
         ]
       },
       {
-        "name": "Combined Workload - Set",
-        "operationResults": [
+        name: "Combined Workload - Set",
+        operationResults: [
           {
-            "size": "10^3",
-            "results": [
+            size: "10^3",
+            enabled: true,
+            results: [
               0.05094700027257204,
               0.06869299989193678,
               0.0858380002900958,
@@ -1231,8 +1307,9 @@ export const BENCHMARK_DATA = [
             ]
           },
           {
-            "size": "10^4",
-            "results": [
+            size: "10^4",
+            enabled: true,
+            results: [
               0.28799299988895655,
               0.28729599993675947,
               0.28686400037258863,
@@ -1246,8 +1323,9 @@ export const BENCHMARK_DATA = [
             ]
           },
           {
-            "size": "10^5",
-            "results": [
+            size: "10^5",
+            enabled: true,
+            results: [
               1.3303089998662472,
               1.3238089997321367,
               1.3146630004048347,
@@ -1261,8 +1339,9 @@ export const BENCHMARK_DATA = [
             ]
           },
           {
-            "size": "10^6",
-            "results": [
+            size: "10^6",
+            enabled: true,
+            results: [
               10.863158999942243,
               11.404587000608444,
               11.298427999950945,
@@ -1276,8 +1355,9 @@ export const BENCHMARK_DATA = [
             ]
           },
           {
-            "size": "10^7",
-            "results": [
+            size: "10^7",
+            enabled: true,
+            results: [
               112.29563400056213,
               114.72214000020176,
               111.30348199978471,
@@ -1295,14 +1375,15 @@ export const BENCHMARK_DATA = [
     ]
   },
   {
-    "name": "Linked List",
-    "operations": [
+    name: "Linked List",
+    operations: [
       {
-        "name": "Iterate - Linked List",
-        "operationResults": [
+        name: "Iterate - Linked List",
+        operationResults: [
           {
-            "size": "10^3",
-            "results": [
+            size: "10^3",
+            enabled: true,
+            results: [
               0.31702399998903275,
               0.12999199982732534,
               0.12386400066316128,
@@ -1316,8 +1397,9 @@ export const BENCHMARK_DATA = [
             ]
           },
           {
-            "size": "10^4",
-            "results": [
+            size: "10^4",
+            enabled: true,
+            results: [
               0.3142990004271269,
               0.3637580005452037,
               0.24689099937677383,
@@ -1331,8 +1413,9 @@ export const BENCHMARK_DATA = [
             ]
           },
           {
-            "size": "10^5",
-            "results": [
+            size: "10^5",
+            enabled: true,
+            results: [
               1.4227800006046891,
               1.388217999599874,
               1.3473370000720024,
@@ -1346,8 +1429,9 @@ export const BENCHMARK_DATA = [
             ]
           },
           {
-            "size": "10^6",
-            "results": [
+            size: "10^6",
+            enabled: true,
+            results: [
               15.390053999610245,
               15.549351999536157,
               15.919645000249147,
@@ -1361,8 +1445,9 @@ export const BENCHMARK_DATA = [
             ]
           },
           {
-            "size": "10^7",
-            "results": [
+            size: "10^7",
+            enabled: true,
+            results: [
               329.09273099992424,
               190.21133300010115,
               194.30575199984014,
@@ -1378,11 +1463,12 @@ export const BENCHMARK_DATA = [
         ]
       },
       {
-        "name": "Insert - Linked List",
-        "operationResults": [
+        name: "Insert - Linked List",
+        operationResults: [
           {
-            "size": "10^3",
-            "results": [
+            size: "10^3",
+            enabled: true,
+            results: [
               0.0826249998062849,
               0.018047000281512737,
               0.009329999797046185,
@@ -1396,8 +1482,9 @@ export const BENCHMARK_DATA = [
             ]
           },
           {
-            "size": "10^4",
-            "results": [
+            size: "10^4",
+            enabled: true,
+            results: [
               0.028725000098347664,
               0.028470000252127647,
               0.02787799946963787,
@@ -1411,8 +1498,9 @@ export const BENCHMARK_DATA = [
             ]
           },
           {
-            "size": "10^5",
-            "results": [
+            size: "10^5",
+            enabled: true,
+            results: [
               0.3302870001643896,
               0.280005999840796,
               0.22793300077319145,
@@ -1426,8 +1514,9 @@ export const BENCHMARK_DATA = [
             ]
           },
           {
-            "size": "10^6",
-            "results": [
+            size: "10^6",
+            enabled: true,
+            results: [
               5.891127000562847,
               5.065119000151753,
               5.047345999628305,
@@ -1441,8 +1530,9 @@ export const BENCHMARK_DATA = [
             ]
           },
           {
-            "size": "10^7",
-            "results": [
+            size: "10^7",
+            enabled: true,
+            results: [
               48.5673209996894,
               52.09884199965745,
               53.60760699957609,
@@ -1458,11 +1548,12 @@ export const BENCHMARK_DATA = [
         ]
       },
       {
-        "name": "Search - Linked List",
-        "operationResults": [
+        name: "Search - Linked List",
+        operationResults: [
           {
-            "size": "10^3",
-            "results": [
+            size: "10^3",
+            enabled: true,
+            results: [
               0.24638300016522408,
               0.12104700040072203,
               0.11742199957370758,
@@ -1476,8 +1567,9 @@ export const BENCHMARK_DATA = [
             ]
           },
           {
-            "size": "10^4",
-            "results": [
+            size: "10^4",
+            enabled: true,
+            results: [
               0.0678119994699955,
               0.06686399970203638,
               0.06892899982631207,
@@ -1491,8 +1583,9 @@ export const BENCHMARK_DATA = [
             ]
           },
           {
-            "size": "10^5",
-            "results": [
+            size: "10^5",
+            enabled: true,
+            results: [
               0.6996020004153252,
               0.6925960006192327,
               0.6692850003018975,
@@ -1506,8 +1599,9 @@ export const BENCHMARK_DATA = [
             ]
           },
           {
-            "size": "10^6",
-            "results": [
+            size: "10^6",
+            enabled: true,
+            results: [
               7.463432000018656,
               7.414605000056326,
               7.637977999635041,
@@ -1521,8 +1615,9 @@ export const BENCHMARK_DATA = [
             ]
           },
           {
-            "size": "10^7",
-            "results": [
+            size: "10^7",
+            enabled: true,
+            results: [
               93.77214800007641,
               95.44526700023562,
               94.51291899941862,
@@ -1538,11 +1633,12 @@ export const BENCHMARK_DATA = [
         ]
       },
       {
-        "name": "Delete - Linked List",
-        "operationResults": [
+        name: "Delete - Linked List",
+        operationResults: [
           {
-            "size": "10^3",
-            "results": [
+            size: "10^3",
+            enabled: true,
+            results: [
               0.10138399992138147,
               0.022697999142110348,
               0.009580999612808228,
@@ -1556,8 +1652,9 @@ export const BENCHMARK_DATA = [
             ]
           },
           {
-            "size": "10^4",
-            "results": [
+            size: "10^4",
+            enabled: true,
+            results: [
               0.08452200051397085,
               0.2705930005759001,
               0.0849590003490448,
@@ -1571,8 +1668,9 @@ export const BENCHMARK_DATA = [
             ]
           },
           {
-            "size": "10^5",
-            "results": [
+            size: "10^5",
+            enabled: true,
+            results: [
               0.21551099978387356,
               0.22019900009036064,
               0.2184929996728897,
@@ -1586,8 +1684,9 @@ export const BENCHMARK_DATA = [
             ]
           },
           {
-            "size": "10^6",
-            "results": [
+            size: "10^6",
+            enabled: true,
+            results: [
               4.397264000028372,
               4.26078400015831,
               4.440211999230087,
@@ -1601,8 +1700,9 @@ export const BENCHMARK_DATA = [
             ]
           },
           {
-            "size": "10^7",
-            "results": [
+            size: "10^7",
+            enabled: true,
+            results: [
               49.45007599983364,
               54.39839000068605,
               53.70870899967849,
@@ -1618,11 +1718,12 @@ export const BENCHMARK_DATA = [
         ]
       },
       {
-        "name": "Combined Workload - Linked List",
-        "operationResults": [
+        name: "Combined Workload - Linked List",
+        operationResults: [
           {
-            "size": "10^3",
-            "results": [
+            size: "10^3",
+            enabled: true,
+            results: [
               0.5755030000582337,
               0.29834700003266335,
               0.29968899954110384,
@@ -1636,8 +1737,9 @@ export const BENCHMARK_DATA = [
             ]
           },
           {
-            "size": "10^4",
-            "results": [
+            size: "10^4",
+            enabled: true,
+            results: [
               0.6329930005595088,
               0.41946399956941605,
               0.4448109995573759,
@@ -1651,8 +1753,9 @@ export const BENCHMARK_DATA = [
             ]
           },
           {
-            "size": "10^5",
-            "results": [
+            size: "10^5",
+            enabled: true,
+            results: [
               3.8418149994686246,
               5.069575000554323,
               5.478942999616265,
@@ -1666,8 +1769,9 @@ export const BENCHMARK_DATA = [
             ]
           },
           {
-            "size": "10^6",
-            "results": [
+            size: "10^6",
+            enabled: true,
+            results: [
               62.248317000456154,
               69.0251139998436,
               66.13764300011098,
@@ -1681,8 +1785,9 @@ export const BENCHMARK_DATA = [
             ]
           },
           {
-            "size": "10^7",
-            "results": [
+            size: "10^7",
+            enabled: true,
+            results: [
               696.4588580001146,
               700.3555200006813,
               715.7505520004779,

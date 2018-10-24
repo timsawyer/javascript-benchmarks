@@ -43,22 +43,27 @@ const getOperationResultsObject = () => {
   const operationResults = [
     {
       size: "10^3",
+      enabled: true,
       results: []
     },
     {
       size: "10^4",
+      enabled: true,
       results: []
     },
     {
       size: "10^5",
+      enabled: true,
       results: []
     },
     {
       size: "10^6",
+      enabled: true,
       results: []
     },
     {
       size: "10^7",
+      enabled: true,
       results: []
     }
   ];

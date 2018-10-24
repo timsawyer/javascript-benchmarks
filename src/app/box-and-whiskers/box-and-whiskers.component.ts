@@ -14,6 +14,7 @@ declare const d3;
 export interface SingleBoxData {
   size: string;
   results: number[];
+  enabled?: boolean;
 }
 export interface BoxData {
   name: string;
@@ -41,7 +42,9 @@ export class BoxAndWhiskersComponent implements OnInit, OnDestroy {
   }
 
   ngOnInit() {
-    this.chartEl = this.elementRef.nativeElement;
+    this.chartEl = this.elementRef.nativeElement.querySelector(
+      ".chart-container"
+    );
     setTimeout(() => {
       this.updateChart();
     }, 500);
@@ -49,6 +52,11 @@ export class BoxAndWhiskersComponent implements OnInit, OnDestroy {
 
   ngOnDestroy() {
     this.resizeService.updates.delete(this);
+  }
+
+  public onResultSetToggled(newValue: boolean, resultSet: SingleBoxData) {
+    console.log(newValue);
+    this.updateChart();
   }
 
   public updateChart = () => {
@@ -88,19 +96,21 @@ export class BoxAndWhiskersComponent implements OnInit, OnDestroy {
 
     // calc min / max and format data
     const data = [];
-    this.data.operationResults.forEach(operationResultSet => {
-      const rowMax = Math.max(...operationResultSet.results);
-      const rowMin = Math.min(...operationResultSet.results);
+    this.data.operationResults
+      .filter(operationResultSet => operationResultSet.enabled)
+      .forEach(operationResultSet => {
+        const rowMax = Math.max(...operationResultSet.results);
+        const rowMin = Math.min(...operationResultSet.results);
 
-      if (rowMax > max) {
-        max = rowMax;
-      }
-      if (rowMin < min) {
-        min = rowMin;
-      }
+        if (rowMax > max) {
+          max = rowMax;
+        }
+        if (rowMin < min) {
+          min = rowMin;
+        }
 
-      data.push([operationResultSet.size, operationResultSet.results]);
-    });
+        data.push([operationResultSet.size, operationResultSet.results]);
+      });
 
     const chart = d3
       .box()

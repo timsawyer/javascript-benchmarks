@@ -1,1 +1,7 @@
-<div #chartContainer></div>
+<div class="chart-container"></div>
+
+<div class="data-toggle-container">
+  <mat-checkbox *ngFor="let resultSet of data.operationResults" [(ngModel)]="resultSet.enabled" (ngModelChange)="onResultSetToggled($event, operation)">
+    {{resultSet.size }}
+  </mat-checkbox>
+</div>

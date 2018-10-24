@@ -4,6 +4,36 @@ app-box-and-whiskers {
   height: 100%;
 }
 
+.chart-container {
+  display: block;
+  height: calc(100% - 50px);
+  width: 100%;
+}
+
+.data-toggle-container {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 50px;
+
+  mat-checkbox {
+    margin-right: 10px;
+
+    .mat-checkbox-layout .mat-checkbox-label {
+      line-height: 14px;
+      font-size: 14px;
+    }
+
+    .mat-checkbox-inner-container {
+      width: 14px;
+      height: 14px;
+    }
+  }
+}
+
 .box {
   font: 10px sans-serif;
 }
