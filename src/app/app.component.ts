@@ -23,6 +23,7 @@ export class AppComponent implements AfterViewInit {
 
   public toggleSidenav() {
     this.showSidenav = !this.showSidenav;
+    setTimeout(() => this.updateAllCharts(), 10);
   }
 
   constructor(private http: HttpClient, private resizeService: ResizeService) {
