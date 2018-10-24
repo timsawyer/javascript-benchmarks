@@ -20,22 +20,27 @@ const setBenchmarkData = {
     {
       name: "Delete - Set",
       operationResults: []
+    },
+    {
+      name: "Combined Workload - Set",
+      operationResults: []
     }
   ]
 };
 
 // generate data for array and gather results for each operation
-const set_10_3 = utils.generateSet(10);
-const set_10_4 = utils.generateSet(10);
-const set_10_5 = utils.generateSet(10);
-const set_10_6 = utils.generateSet(10);
-const set_10_7 = utils.generateSet(10);
+const set_10_3 = utils.generateSet(1000);
+const set_10_4 = utils.generateSet(10000);
+const set_10_5 = utils.generateSet(100000);
+const set_10_6 = utils.generateSet(1000000);
+const set_10_7 = utils.generateSet(10000000);
 const setSizes = [set_10_3, set_10_4, set_10_5, set_10_6, set_10_7];
 
 const setIterationResults = utils.getOperationResultsObject();
 const setInsertResults = utils.getOperationResultsObject();
 const setSearchResults = utils.getOperationResultsObject();
 const setDeleteResults = utils.getOperationResultsObject();
+const setCombinedWorkloadResults = utils.getOperationResultsObject();
 
 // Run each operation 10 times for each set size and collect results
 setSizes.forEach((set, setSizeIndex) => {
@@ -80,12 +85,42 @@ setSizes.forEach((set, setSizeIndex) => {
     const timeElapsed = performance.now() - start;
     setDeleteResults[setSizeIndex].results.push(timeElapsed);
   }
+
+  // run combined workload
+  // 6 inserts, 1 search, 1 iterate, 2 delete
+  for (let i = 0; i < 10; i++) {
+    const middleItem = set.size / 2;
+    let lastItem = set.size;
+    const start = performance.now();
+
+    // workload
+    set.add(++lastItem);
+    set.add(++lastItem);
+    set.add(++lastItem);
+    set.add(++lastItem);
+    set.add(++lastItem);
+    set.add(++lastItem);
+
+    set.has(middleItem);
+
+    set.forEach(() => {
+      return;
+    });
+
+    set.delete(--lastItem);
+    set.delete(--lastItem);
+    // end workload
+
+    const timeElapsed = performance.now() - start;
+    setCombinedWorkloadResults[setSizeIndex].results.push(timeElapsed);
+  }
 });
 
 setBenchmarkData.operations[0].operationResults = setIterationResults;
 setBenchmarkData.operations[1].operationResults = setInsertResults;
 setBenchmarkData.operations[2].operationResults = setSearchResults;
 setBenchmarkData.operations[3].operationResults = setDeleteResults;
+setBenchmarkData.operations[4].operationResults = setCombinedWorkloadResults;
 
 delete set_10_3;
 delete set_10_4;

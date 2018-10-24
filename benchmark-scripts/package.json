@@ -4,7 +4,7 @@
   "description": "",
   "main": "benchmark.js",
   "scripts": {
-    "benchmarks": "node array-benchmarks && node map-benchmarks && node set-benchmarks && node linked-list-benchmarks && node combine-results"
+    "benchmarks": "node array-benchmarks && node map-benchmarks && node set-benchmarks && node linked-list-benchmarks && node combine-results && echo 'Benchmarks complete'"
   },
   "author": "",
   "license": "ISC",

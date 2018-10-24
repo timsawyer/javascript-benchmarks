@@ -33,11 +33,11 @@ const arrayBenchmarkData = {
 };
 
 // generate data for array and gather results for each operation
-const array_10_3 = utils.generateArray(10);
-const array_10_4 = utils.generateArray(10);
-const array_10_5 = utils.generateArray(10);
-const array_10_6 = utils.generateArray(10);
-const array_10_7 = utils.generateArray(10);
+const array_10_3 = utils.generateArray(1000);
+const array_10_4 = utils.generateArray(10000);
+const array_10_5 = utils.generateArray(100000);
+const array_10_6 = utils.generateArray(1000000);
+const array_10_7 = utils.generateArray(10000000);
 const arraySizes = [array_10_3, array_10_4, array_10_5, array_10_6, array_10_7];
 
 const arrayIterationResults = utils.getOperationResultsObject();

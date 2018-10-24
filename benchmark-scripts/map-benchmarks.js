@@ -20,22 +20,27 @@ const mapBenchmarkData = {
     {
       name: "Delete - Map",
       operationResults: []
+    },
+    {
+      name: "Combined Workload - Map",
+      operationResults: []
     }
   ]
 };
 
 // generate data for array and gather results for each operation
-const map_10_3 = utils.generateMap(10);
-const map_10_4 = utils.generateMap(10);
-const map_10_5 = utils.generateMap(10);
-const map_10_6 = utils.generateMap(10);
-const map_10_7 = utils.generateMap(10);
+const map_10_3 = utils.generateMap(1000);
+const map_10_4 = utils.generateMap(10000);
+const map_10_5 = utils.generateMap(100000);
+const map_10_6 = utils.generateMap(1000000);
+const map_10_7 = utils.generateMap(10000000);
 const mapSizes = [map_10_3, map_10_4, map_10_5, map_10_6, map_10_7];
 
 const mapIterationResults = utils.getOperationResultsObject();
 const mapInsertResults = utils.getOperationResultsObject();
 const mapSearchResults = utils.getOperationResultsObject();
 const mapDeleteResults = utils.getOperationResultsObject();
+const mapCombinedWorkloadResults = utils.getOperationResultsObject();
 
 // Run each operation 10 times for each map size and collect results
 mapSizes.forEach((map, mapSizeIndex) => {
@@ -80,12 +85,42 @@ mapSizes.forEach((map, mapSizeIndex) => {
     const timeElapsed = performance.now() - start;
     mapDeleteResults[mapSizeIndex].results.push(timeElapsed);
   }
+
+  // run combined workload
+  // 6 inserts, 1 search, 1 iterate, 2 delete
+  for (let i = 0; i < 10; i++) {
+    let lastKey = map.size;
+    const middleKey = map.size / 2;
+    const start = performance.now();
+
+    // workload
+    map.set(++lastKey, "insert-item");
+    map.set(++lastKey, "insert-item");
+    map.set(++lastKey, "insert-item");
+    map.set(++lastKey, "insert-item");
+    map.set(++lastKey, "insert-item");
+    map.set(++lastKey, "insert-item");
+
+    map.has(middleKey);
+
+    map.forEach(() => {
+      return;
+    });
+
+    map.delete(--lastKey);
+    map.delete(--lastKey);
+    // end workload
+
+    const timeElapsed = performance.now() - start;
+    mapCombinedWorkloadResults[mapSizeIndex].results.push(timeElapsed);
+  }
 });
 
 mapBenchmarkData.operations[0].operationResults = mapIterationResults;
 mapBenchmarkData.operations[1].operationResults = mapInsertResults;
 mapBenchmarkData.operations[2].operationResults = mapSearchResults;
 mapBenchmarkData.operations[3].operationResults = mapDeleteResults;
+mapBenchmarkData.operations[4].operationResults = mapCombinedWorkloadResults;
 
 delete map_10_3;
 delete map_10_4;
