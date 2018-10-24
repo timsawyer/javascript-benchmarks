@@ -4,8 +4,10 @@ import {
   Input,
   OnChanges,
   OnInit,
-  ViewEncapsulation
+  ViewEncapsulation,
+  OnDestroy
 } from "@angular/core";
+import { ResizeService } from "../resize.service";
 
 declare const d3;
 
@@ -16,21 +18,27 @@ export interface SingleBoxData {
 export interface BoxData {
   name: string;
   operationResults: SingleBoxData[];
+  selected?: boolean;
 }
 
 @Component({
   selector: "app-box-and-whiskers",
   templateUrl: "./box-and-whiskers.component.html",
-  styleUrls: ["./box-and-whiskers.component.css"],
+  styleUrls: ["./box-and-whiskers.component.scss"],
   encapsulation: ViewEncapsulation.None
 })
-export class BoxAndWhiskersComponent implements OnInit, OnChanges {
+export class BoxAndWhiskersComponent implements OnInit, OnDestroy {
   @Input()
   data: BoxData;
 
   private chartEl: HTMLElement;
 
-  constructor(private elementRef: ElementRef) {}
+  constructor(
+    private elementRef: ElementRef,
+    private resizeService: ResizeService
+  ) {
+    this.resizeService.updates.set(this, this.updateChart);
+  }
 
   ngOnInit() {
     this.chartEl = this.elementRef.nativeElement;
@@ -39,14 +47,18 @@ export class BoxAndWhiskersComponent implements OnInit, OnChanges {
     }, 500);
   }
 
-  private updateChart() {
+  ngOnDestroy() {
+    this.resizeService.updates.delete(this);
+  }
+
+  public updateChart = () => {
     if (this.chartEl && this.data) {
       this.clearChart();
       this.drawChart();
     } else if (this.chartEl) {
       this.clearChart();
     }
-  }
+  };
 
   private clearChart() {
     this.chartEl.innerHTML = "";

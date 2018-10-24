@@ -1,0 +1,29 @@
+runtime: python27
+api_version: 1
+threadsafe: true
+
+handlers:
+  - url: /(.+)
+    static_files: dist/javascript-benchmarks/\1
+    upload: dist/javascript-benchmarks/(.+)
+
+  - url: /
+    static_files: dist/javascript-benchmarks/index.html
+    upload: dist/javascript-benchmarks/index.html
+
+  # Skip any files not in the dist folder
+skip_files:
+  - ^node_modules$
+  - ^app\.yaml
+  - ^README\..*
+  - \.gitignore
+  - ^\.git$
+  - ^grunt\.js
+  - ^src$
+  - ^e2e$
+  - \.editorconfig
+  - ^karma\.config\.js
+  - ^package\.json
+  - ^package-lock\.json
+  - ^protractor\.conf\.js
+  - ^tslint\.json

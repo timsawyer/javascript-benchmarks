@@ -1,85 +1,51 @@
 const jsonfile = require("jsonfile");
 const { performance } = require("perf_hooks");
-
-const generateRandomString = () =>
-  Math.random()
-    .toString(36)
-    .substring(2);
-
-const generateArray = length => {
-  const arr = [];
-  for (let i = 0; i < length; i++) {
-    arr.push(generateRandomString());
-  }
-  return arr;
-};
-
-// Iteration, Insert, Search, Delete
-const getOperationResultsObject = () => {
-  const operationResults = [
-    {
-      size: "10^3",
-      results: []
-    },
-    {
-      size: "10^4",
-      results: []
-    },
-    {
-      size: "10^5",
-      results: []
-    },
-    {
-      size: "10^6",
-      results: []
-    },
-    {
-      size: "10^7",
-      results: []
-    }
-  ];
-  return operationResults;
-};
+const utils = require("./utils");
 
 const arrayBenchmarkData = {
   name: "Array",
   operations: [
     {
-      name: "iterate",
+      name: "Iterate - Array",
       operationResults: []
     },
     {
-      name: "insert",
+      name: "Insert - Array",
       operationResults: []
     },
     {
-      name: "search",
+      name: "Search - Array",
       operationResults: []
     },
     {
-      name: "delete",
+      name: "Delete - Array",
       operationResults: []
     },
     {
-      name: "sort",
+      name: "Sort - Array",
+      operationResults: []
+    },
+    {
+      name: "Combined Workload - Array",
       operationResults: []
     }
   ]
 };
 
 // generate data for array and gather results for each operation
-const array_10_3 = generateArray(1000);
-const array_10_4 = generateArray(10000);
-const array_10_5 = generateArray(100000);
-const array_10_6 = generateArray(1000000);
-const array_10_7 = generateArray(10000000);
+const array_10_3 = utils.generateArray(10);
+const array_10_4 = utils.generateArray(10);
+const array_10_5 = utils.generateArray(10);
+const array_10_6 = utils.generateArray(10);
+const array_10_7 = utils.generateArray(10);
 const arraySizes = [array_10_3, array_10_4, array_10_5, array_10_6, array_10_7];
 
-const arrayIterationResults = getOperationResultsObject();
-const arrayInsertResults = getOperationResultsObject();
-const arraySearchResults = getOperationResultsObject();
-const arrayDeleteResults = getOperationResultsObject();
-const arraySortResults = getOperationResultsObject();
+const arrayIterationResults = utils.getOperationResultsObject();
+const arrayInsertResults = utils.getOperationResultsObject();
+const arraySearchResults = utils.getOperationResultsObject();
+const arrayDeleteResults = utils.getOperationResultsObject();
+const arraySortResults = utils.getOperationResultsObject();
+const arrayCombinedWorkloadResults = utils.getOperationResultsObject();
 
 // Run each operation 10 times for each array size and collect results
 arraySizes.forEach((arr, arraySizeIndex) => {
@@ -137,6 +103,35 @@ arraySizes.forEach((arr, arraySizeIndex) => {
     const timeElapsed = performance.now() - start;
     arraySortResults[arraySizeIndex].results.push(timeElapsed);
   }
+
+  // run combined workload
+  // 6 inserts, 1 search, 1 iterate, 2 delete
+  for (let i = 0; i < 10; i++) {
+    const arrCopy = [...arr];
+    const middle = arrCopy.length / 2;
+    const start = performance.now();
+
+    // workload
+    arrCopy.splice(middle, 0, "insert-item");
+    arrCopy.splice(middle, 0, "insert-item");
+    arrCopy.splice(middle, 0, "insert-item");
+    arrCopy.splice(middle, 0, "insert-item");
+    arrCopy.splice(middle, 0, "insert-item");
+    arrCopy.splice(middle, 0, "insert-item");
+
+    arrCopy.indexOf("insert-item");
+
+    arrCopy.forEach(() => {
+      return;
+    });
+
+    arrCopy.splice(middle, 1);
+    arrCopy.splice(middle, 1);
+    // end workload
+
+    const timeElapsed = performance.now() - start;
+    arrayCombinedWorkloadResults[arraySizeIndex].results.push(timeElapsed);
+  }
 });
 
 arrayBenchmarkData.operations[0].operationResults = arrayIterationResults;
@@ -144,6 +139,7 @@ arrayBenchmarkData.operations[1].operationResults = arrayInsertResults;
 arrayBenchmarkData.operations[2].operationResults = arraySearchResults;
 arrayBenchmarkData.operations[3].operationResults = arrayDeleteResults;
 arrayBenchmarkData.operations[4].operationResults = arraySortResults;
+arrayBenchmarkData.operations[5].operationResults = arrayCombinedWorkloadResults;
 
 delete array_10_3;
 delete array_10_4;

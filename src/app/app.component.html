@@ -3,31 +3,32 @@
   <h1 class="title">JavaScript Benchmarks</h1>
   <div class="spacer"></div>
   <a href="https://github.com/timsawyer/javascript-benchmarks" target="_blank">
-    <mat-icon>help</mat-icon>
+    <button mat-icon-button>
+      <mat-icon class="info-icon">info</mat-icon>
+    </button>
   </a>
 </mat-toolbar>
 
 <mat-sidenav-container class="example-container">
   <mat-sidenav mode="side" [opened]="showSidenav">
-    <div class="benchmark-results-options">
-      <mat-checkbox>Check me!</mat-checkbox>
-      <mat-checkbox>Check me!</mat-checkbox>
-      <mat-checkbox>Check me!</mat-checkbox>
-      <mat-checkbox>Check me!</mat-checkbox>
-      <mat-checkbox>Check me!</mat-checkbox>
-      <mat-checkbox>Check me!</mat-checkbox>
-      <mat-checkbox>Check me!</mat-checkbox>
-      <mat-checkbox>Check me!</mat-checkbox>
-      <mat-checkbox>Check me!</mat-checkbox>
-      <mat-checkbox>Check me!</mat-checkbox>
-      <mat-checkbox>Check me!</mat-checkbox>
+    <div class="sidenav-title">Data Structures</div>
+    <div class="side-nav-content">
+      <section *ngFor="let dataStructure of data">
+        <h3>{{ dataStructure.name }}</h3>
+        <mat-checkbox *ngFor="let operation of dataStructure.operations" [(ngModel)]="operation.selected"
+          (ngModelChange)="onOperationToggled($event, operation)">
+          {{getOperationTitle(operation.name) }}
+        </mat-checkbox>
+      </section>
     </div>
   </mat-sidenav>
   <mat-sidenav-content>
     <div class="results-list">
-      <mat-card *ngFor="let result of operationResults">
-        <app-box-and-whiskers [data]="result"></app-box-and-whiskers>
-      </mat-card>
+      <div class="aspect-ratio-sizer" *ngFor="let operation of selectedOperations">
+        <mat-card>
+          <app-box-and-whiskers [data]="operation"></app-box-and-whiskers>
+        </mat-card>
+      </div>
     </div>
   </mat-sidenav-content>
 </mat-sidenav-container>

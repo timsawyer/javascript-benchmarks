@@ -1,12 +1,13 @@
 import { BrowserModule } from "@angular/platform-browser";
 import { NgModule } from "@angular/core";
-
+import { FormsModule } from "@angular/forms";
 import {
   MatToolbarModule,
   MatSidenavModule,
   MatCheckboxModule,
   MatCardModule,
-  MatIconModule
+  MatIconModule,
+  MatButtonModule
 } from "@angular/material";
 
 import { AppComponent } from "./app.component";
@@ -19,9 +20,11 @@ import { HttpClientModule } from "@angular/common/http";
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
+    FormsModule,
     MatToolbarModule,
     MatSidenavModule,
     MatCheckboxModule,
+    MatButtonModule,
     MatCardModule,
     MatIconModule,
     HttpClientModule

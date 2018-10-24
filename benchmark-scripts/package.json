@@ -4,11 +4,12 @@
   "description": "",
   "main": "benchmark.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "benchmarks": "node array-benchmarks && node map-benchmarks && node set-benchmarks && node linked-list-benchmarks && node combine-results"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "dbly-linked-list": "^0.2.0",
     "jsonfile": "^5.0.0",
     "linked-list": "^1.0.4",
     "random-number": "0.0.9"

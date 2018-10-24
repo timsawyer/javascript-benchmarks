@@ -1,0 +1,82 @@
+.menu-button {
+  cursor: pointer;
+}
+
+.spacer {
+  flex: 1;
+}
+
+.title {
+  margin-left: 20px;
+}
+
+.info-icon {
+  color: #448aff;
+}
+
+.benchmark-results-options {
+  padding: 20px;
+  width: 200px;
+}
+
+.side-nav-content {
+  padding: 0 12px;
+}
+
+.sidenav-title {
+  text-transform: uppercase;
+  font: 14px Roboto, sans-serif;
+  padding: 12px;
+  background: #eee;
+  color: #333;
+  padding-right: 80px;
+}
+
+.side-nav-content h3 {
+  font: 18px Roboto, sans-serif;
+  font-weight: bold;
+  margin-bottom: 6px;
+}
+
+.side-nav-content mat-checkbox {
+  display: block;
+  margin-bottom: 8px;
+  margin-left: 6px;
+}
+
+mat-sidenav-container {
+  height: calc(100% - 64px);
+}
+
+.results-list {
+  padding: 20px;
+  padding-bottom: 40px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  overflow-y: scroll;
+  height: calc(100% - 40px);
+}
+
+.aspect-ratio-sizer {
+  box-sizing: border-box;
+  flex: 1;
+  margin: 5px;
+  min-width: 600px;
+  position: relative;
+}
+
+.aspect-ratio-sizer::before {
+  content: "";
+  padding-top: 56.25%; //forces 4:9 aspect ratio
+  display: block;
+}
+
+.aspect-ratio-sizer mat-card {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+}
