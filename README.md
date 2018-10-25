@@ -14,7 +14,7 @@ https://javascript-benchmarks.appspot.com
 
 For this project, I created several benchmarking scripts to test the speeds of various data structures in JavaScript. I tested the following data structures: Array, Map, Set, Linked List. The Array, Map, and Set are native JavaScript data structures. The linked list is an implementation from NPM.
 
-For each data structure, I tested execution times for the following operations: iteration, insertion, deletion, search, and a combined workload. The combined workload for each data structures that was comprised of 60% insertion, 20% deletion, 10% insertion, and 10% search. . For the Array, I also tested the built in sort function.
+For each data structure, I tested execution times for the following operations: iteration, insertion, deletion, search, and a combined workload. The combined workload for each data structure was comprised of 60% insertion, 20% deletion, 10% insertion, and 10% search. For the Array, I also tested the native sort function.
 
 For insert, delete, and search operations, the middle item in the data structure was targeted each time.
 
